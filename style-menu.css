@@ -17,18 +17,20 @@
     font-style: normal;
     }
     .button{
-        background-color: white;
+        background-color:  transparent;
         border: 3px solid transparent;
    }
-   .button:focus{
-        background-color: white;
+   .button:focus, .button:hover{
+        background-color:  transparent;
         border-radius: -10px;
         outline: none;
         border-left:  4px solid #41F6D7;
         color: #7E7E82;
+        cursor: pointer;
+        cursor:cell;
    }
-   .main-menu__button-border:focus{
-    background-color: white;
+   .main-menu__button-border:focus,   .main-menu__button-border:hover{
+    background-color:  transparent;
     border-radius: 6px;
     outline: none;
     border:  3px solid #41F6D7;
@@ -37,6 +39,9 @@
     animation-fill-mode: forwards;
    }
    body{
+    font-family: 'TT Lakes Condensed Thin';
+}
+.overlay{
     position: absolute;
     top: 0;
     left: 0;
@@ -44,17 +49,14 @@
     height: 100%;
     padding: 0px;
     margin: 0px;
-    font-family: 'TT Lakes Condensed Thin';
-
+    
 }
 .main-menu{
     position: relative;
-    left: 0;
-    top: 0;
     max-width: 320px;
     height: 100%;
     box-shadow: 50px 0 20px #F8F8F8;
-    z-index: 1000;
+    z-index: 10;
     display: flex;
     flex-direction: column;
     justify-content: space-between
@@ -79,9 +81,10 @@
 }
 .main-menu__row{
     list-style: none;
-    margin-top: 20px;
+    margin-top: 15px;
 }
  ul .main-menu__button{
+     display: block;
     text-decoration: none;
     color: black;
     font-weight: bold;
