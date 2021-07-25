@@ -29,14 +29,20 @@
         cursor: pointer;
         cursor:cell;
    }
-   .main-menu__button-border:focus,   .main-menu__button-border:hover{
+   .main-menu__button-border:hover{
+    border: 3px solid transparent;
+    outline: none;
+    animation-name: optic;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+   }
+   .main-menu__button-border:focus  {
     background-color:  transparent;
     border-radius: 6px;
     outline: none;
     border:  3px solid #41F6D7;
-    animation-name: optic;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+
    }
    body{
     font-family: 'TT Lakes Condensed Thin';
@@ -79,7 +85,7 @@
     padding: 0;
     margin: 0;
 }
-.main-menu__row{
+.main-menu__item{
     list-style: none;
     margin-top: 15px;
 }
